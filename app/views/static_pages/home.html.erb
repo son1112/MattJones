@@ -1,0 +1,29 @@
+<div class='content'>
+  <h2 style='border-bottom: 2px solid red;'>Welcome to JayHop Helicopters Nebraska Swoop! Please check the boxes of those lifts that you are interested in taking. We will contact you soon!</h2>
+
+  <div id='rides'>
+    <% @rides.each do |ride| %>
+      <% @rideDate = ride.time_start.to_date.strftime("%b %d") %>
+      <% @rideTime = ride.time_start.to_time.strftime("%l:%M") %>
+      <div class='ridetime'>
+	<h3><%= @rideDate %></h3>
+	<%= @rideTime %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+
+
+<script>
+ $(document).ready(function() {
+   $('#ajax').on('click', 'button', function() {
+     $.ajax('/app/views/static_pages/ajax-test', {
+       success: function(response) {
+	 $('.ajax-test').html(response).fadeIn();
+       }
+     });
+   });
+ });
+</script>

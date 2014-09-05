@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MattJones</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>JayHop Helicopters</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<%= yield %>
+    <div class='container'>
+      <%= render 'layouts/header' %>
+      <p class='notice'><%= notice %></p>
+      <p class='alert'><%= alert %></p>
+    </div>
 
-</body>
+    <div class='rect-red'>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
+
+  </body>
 </html>

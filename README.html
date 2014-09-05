@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>README</title>
+<!-- 2014-09-05 Fri 09:35 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Ander" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">README</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Static Pages</a></li>
+<li><a href="#sec-2">2. User accounts</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Devise</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Scheduler</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Rides</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Mailer</a></li>
+<li><a href="#sec-5">5. Style</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Bootstrap</a></li>
+<li><a href="#sec-5-2">5.2. jQuery Datepicker</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Config</a></li>
+</ul>
+</div>
+</div>
+<p>
+JayHop Helicopters 
+Scheduler
+</p>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Static Pages</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+rails g controller static_pages home
+</pre>
+
+<p>
+<a href="./app/views/static_pages/home.html.erb">./app/views/static_pages/home.html.erb</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> User accounts</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Devise</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Users has many rides
+</p>
+
+<p>
+Ride has one user
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Scheduler</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Rides</h3>
+<div class="outline-text-3" id="text-3-1">
+<pre class="example">
+rails g scaffold Ride roundtrip:boolean time_start:datetime time_end:datetime 
+</pre>
+
+<p>
+<a href="./Gemfile">./Gemfile</a>
+</p>
+
+<p>
+<a href="./app/assets/javascripts/application.js">./app/assets/javascripts/application.js</a>
+</p>
+
+<p>
+<a href="./app/assets/stylesheets/application.css.scss">./app/assets/stylesheets/application.css.scss</a>
+</p>
+
+<p>
+<a href="./app/views/rides/index.html.erb">./app/views/rides/index.html.erb</a>
+</p>
+
+<p>
+<a href="./app/views/rides/new.html.erb">./app/views/rides/new.html.erb</a>
+</p>
+
+<p>
+<a href="./app/assets/javascripts">./app/assets/javascripts</a>
+</p>
+
+<p>
+<a href="./app/models/ride.rb">./app/models/ride.rb</a>
+</p>
+
+<p>
+<a href="./app/controllers/rides_controller.rb">./app/controllers/rides_controller.rb</a>
+</p>
+
+<p>
+<a href="./db/seeds.rb">./db/seeds.rb</a>
+</p>
+
+<ul class="org-ul">
+<li><code>[&#xa0;]</code> associate with user
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Mailer</h2>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Style</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Bootstrap</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+<a href="./Gemfile">./Gemfile</a>
+</p>
+
+<pre class="example">
+gem 'bootstrap-sass', '~&gt; 3.2.0'
+gem 'sass-rails', '&gt;= 3.2'
+gem 'autoprefixer-rails'
+</pre>
+
+<p>
+<a href="./app/assets/stylesheets/bootstrap_and_customization.css.scss">./app/assets/stylesheets/bootstrap_and_customization.css.scss</a>
+</p>
+
+<pre class="example">
+@import "bootstrap-sprockets";
+@import "bootstrap";
+</pre>
+
+<p>
+<a href="./app/assets/javascripts/application.js">./app/assets/javascripts/application.js</a>
+</p>
+
+<pre class="example">
+//= require jquery
+//= require bootstrap-sprockets
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> jQuery Datepicker</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+<a href="./Gemfile">./Gemfile</a>
+</p>
+
+<pre class="example">
+gem 'jquery-ui-rails'
+</pre>
+
+<p>
+<a href="./app/assets/javascripts/application.js">./app/assets/javascripts/application.js</a>
+</p>
+
+<pre class="example">
+//= require jquery.ui.all
+</pre>
+
+<p>
+<a href="./app/assets/stylesheets/application.css.scss">./app/assets/stylesheets/application.css.scss</a>
+</p>
+
+<pre class="example">
+*= require jquery.ui.all
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Config</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<a href="./Gemfile">./Gemfile</a>
+<a href="./config/routes.rb">./config/routes.rb</a>
+<a href="./app/assets/javascripts/application.js">./app/assets/javascripts/application.js</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Roundtrip:</strong>
+  <%= @ride.roundtrip %>
+</p>
+
+<p>
+  <strong>Time start:</strong>
+  <%= @ride.time_start %>
+</p>
+
+<p>
+  <strong>Time end:</strong>
+  <%= @ride.time_end %>
+</p>
+
+<%= link_to 'Edit', edit_ride_path(@ride) %> |
+<%= link_to 'Back', rides_path %>

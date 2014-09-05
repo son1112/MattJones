@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Marck+Script|Calligraffitti|Tangerine|Pacifico|Dancing+Script|Courgette|Satisfy|Pinyon+Script|Kaushan+Script);
+
+	    $hskred: #a00000;
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden { display: none; }
+
+.shadow {
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+.padded {
+    padding: 15px;
+}
+
+.heli {
+    width: 20%;
+    position: fixed;
+    left: -50px;
+    top: -50px;
+    z-index: 2;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.title {
+    @extend .padded;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 5px;
+    .primary {
+	font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
+	font-size: 5vw;
+	color: red;
+	text-decoration: underline;
+    }
+    .secondary {
+	color: red;
+	text-align: right;
+	position: relative;
+	top: -25px;
+	right: 50px;
+	font-size: 2vw;
+    }
+    .pilot {
+	font-size: 1vw;
+	text-align: right;
+	position: relative;
+	top: -35px;
+	right: 50px;
+    }
+}
+
+.content {
+    @extend .shadow;
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    width: 700px;
+    margin: 0 auto 50px auto;
+    background: white;
+    border-radius: 3px;
+    h2 {
+	@extend .padded;
+	color: black;
+	line-height: 120%;
+	text-align: center;
+    }
+}
+
+.rect-red {
+    height: 100%;
+    width: 50%;
+    background: $hskred;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#rides {
+    @extend .padded;
+}
+
+.ridetime {
+    @extend .padded;
+}
+
+/*flash*/
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+}
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+}
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+}
