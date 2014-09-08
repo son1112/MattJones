@@ -5,8 +5,6 @@ class Contact < MailForm::Base
   attribute :nickname,  :captcha  => true
   attribute :rides,     :array => true
 
-  has_many :rides
-
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
   def headers
