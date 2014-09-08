@@ -25,47 +25,79 @@ html, body {
     position: fixed;
     left: -50px;
     top: -50px;
-    z-index: 2;
+    z-index: 6;
     border-radius: 50%;
-    border: 4px solid black;
+    border: 3px solid black;
 }
 
 #menu {
+    background: white;
+    width: 10%;
     position: fixed;
-    top: 0;
-    left: 50%;
-    z-index: 5;
+    top: 250px;
+    left: 2%;
+    padding: 5px;
+    margin: auto;
+    z-index: 3;
+    border-radius: 4px;
     ul {
+	display: inline;
 	list-style-type: none;
+	li {
+	    padding: 10px;
+	    margin: 10px;
+	    border-radius: 3px;
+	}
+	a {
+	    text-decoration: none;
+	    font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
+	    font-size: 2vw;
+	    background: white;
+	    color: red;
+	    &:hover {
+		background: red;
+		color: white;
+		padding: 5px;
+		border-radius: 3px;
+	    }
+	}
     }
 }
+
 
 .title {
     @extend .padded;
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
-    right: 5px;
+    right: 0;
+    background: white;
+    width: 100%;
+    height: 110px;
+    @extend .shadow;
     .primary {
 	font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
 	font-size: 5vw;
 	color: red;
 	text-decoration: underline;
+	text-align: right;
     }
     .secondary {
 	color: red;
 	text-align: right;
 	position: relative;
-	top: -25px;
+	top: 0;
 	right: 50px;
 	font-size: 2vw;
+	z-index: 3;
     }
     .pilot {
 	font-size: 1vw;
 	text-align: right;
 	position: relative;
-	top: -35px;
+	top: -10px;
 	right: 50px;
+	font-weight: bold;
     }
 }
 
@@ -87,6 +119,7 @@ html, body {
 }
 
 .rect-red {
+    display: none;
     height: 100%;
     width: 50%;
     background: $hskred;
@@ -98,11 +131,24 @@ html, body {
 
 #rides {
     @extend .padded;
+    margin-bottom: 50px;
 }
 
 #date {
     background: white;
     color: black;
+    margin: 0;
+    width: 100%;
+    padding: 15px 0 0 15px;
+    font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
+    text-align: center;
+    font-size: 6vw;
+    border-radius: 3px;
+}
+
+#time {
+    font-size: 2vw;
+    margin: 10px auto;
 }
 
 .ridetime {

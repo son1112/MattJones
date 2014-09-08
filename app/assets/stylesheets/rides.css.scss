@@ -2,3 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.hi-li {
+    font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';    
+    font-size: 2vw;
+    color: red;
+    &:hover {
+	background: red;
+	color: white;
+    }
+}

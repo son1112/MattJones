@@ -1,4 +1,4 @@
-<div class='content'>
+<div class='content' style='margin-bottom: 50px;'>
   <h2 style='border-bottom: 2px solid red;'>Welcome to JayHop Helicopters Nebraska Swoop! Please check the boxes of those lifts that you are interested in taking. We will contact you soon!</h2>
 
 
@@ -16,6 +16,9 @@
 	  <div id='time'>
 	    <% if (rideDate(ride) == d) %>
 	      <%= @rideTime %>
+	      <% if ride.roundtrip == true %>
+		(roundtrip)
+	      <% end %>
 	      <%= check_box_tag(:rides) %>
 	    <% end %>
 	  </div>
