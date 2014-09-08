@@ -1,6 +1,20 @@
 <%= image_tag('noname.jpg', class: 'heli') %>
+
+<div id='menu'>
+  <ul>
+    <li><%= link_to 'Schedule', root_path %></li>
+    <li><%= link_to 'Contact', contacts_path %></li>
+    <li><%= link_to 'Rides', rides_path %></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+
 <div class='title'>
   <h1 class='primary'>Nebraska Swoop</h1>
-  <h2 class='secondary'>JayHop Helicopters</h2>
-  <h3 class='pilot'>Matthew Jones (Chief Pilot)</h3>
+  <div>
+    <h2 class='secondary'>JayHop Helicopters</h2>
+    <h3 class='pilot'>Matthew Jones (Chief Pilot)</h3>
+  </div>
 </div>
+

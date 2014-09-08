@@ -1,15 +1,28 @@
 <div class='content'>
   <h2 style='border-bottom: 2px solid red;'>Welcome to JayHop Helicopters Nebraska Swoop! Please check the boxes of those lifts that you are interested in taking. We will contact you soon!</h2>
 
+
   <div id='rides'>
-    <% @rides.each do |ride| %>
-      <% @rideDate = ride.time_start.to_date.strftime("%b %d") %>
-      <% @rideTime = ride.time_start.to_time.strftime("%l:%M") %>
-      <div class='ridetime'>
-	<h3><%= @rideDate %></h3>
-	<%= @rideTime %>
-      </div>
-    <% end %>
+
+    <div class='ridetime'>
+      <% getDates.each do |d| %>
+
+	<div id='date'>
+	  <h3><%= d %></h3>
+	</div>
+
+	<% @rides.each do |ride| %>
+	  <% @rideTime = ride.time_start.to_time.strftime("%l:%M") %>
+	  <div id='time'>
+	    <% if (rideDate(ride) == d) %>
+	      <%= @rideTime %>
+	      <%= check_box_tag(:rides) %>
+	    <% end %>
+	  </div>
+
+	<% end %>
+      <% end %>
+    </div>
   </div>
 
 </div>
