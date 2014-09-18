@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Yellowtail|Marck+Script|Calligraffitti|Tangerine|Pacifico|Dancing+Script|Courgette|Satisfy|Pinyon+Script|Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Yellowtail|Marck+Script|Calligraffitti|Tangerine|Pacifico|Dancing+Script|Courgette|Satisfy|Orbitron|Pinyon+Script|Kaushan+Script);
 
 	    
 $hskred: #a00000;
@@ -9,7 +9,8 @@ $hskred: #a00000;
 html, body {
     width: 100%;
     height: 100%;
-    background: #ecf0f1;
+    background: black;
+    font-family: 'Orbitron';
 }
 
 .hidden { display: none; }
@@ -18,11 +19,24 @@ html, body {
     box-shadow: 1px 1px 10px 1px black;
 }
 
+.shadow-red {
+    box-shadow: 1px 1px 1px 1px red;
+}
+
 .padded {
     padding: 15px;
 }
 
+.logo {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 50%;
+    z-index: 5;
+}
+
 .heli {
+    
     width: 20%;
     position: fixed;
     left: -50px;
@@ -36,12 +50,18 @@ html, body {
     background: white;
     width: 10%;
     position: fixed;
-    top: 250px;
-    left: 2%;
+    top: 45%;
+    left: 5%;
     padding: 5px;
     margin: auto;
     z-index: 3;
     border-radius: 4px;
+    .logo {
+	width: 200%;
+	position: absolute;
+	top: 250px;
+	left: -50%;
+    }
     ul {
 	display: inline;
 	list-style-type: none;
@@ -66,6 +86,22 @@ html, body {
     }
 }
 
+.primary {
+    font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
+    font-size: 5vw;
+    color: red;
+//    text-decoration: underline;
+    width: 60%;
+    text-align: left;
+    background: transparent;
+    border-radius: 5px 200px;
+    padding: 30px 15px 0 35px;
+//    @extend .shadow-red;
+    position: fixed;
+    top: 20%;
+    right: -300px;
+}
+
 
 .title {
     @extend .padded;
@@ -73,24 +109,10 @@ html, body {
     z-index: 4;
     top: 0;
     right: 0;
-    background: white;
-    width: 100%;
+//    background: white;
+//    width: 100%;
     height: 75px;
     @extend .shadow;
-    .primary {
-	font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
-	font-size: 5vw;
-	color: red;
-	text-decoration: underline;
-	text-align: right;
-	background: white;
-	border-radius: 5px 200px;
-	padding: 50px 15px 0 0;
-	@extend .shadow;
-	position: relative;
-	top: -60px;
-	left: -50px;
-    }
     .secondary {
 	color: red;
 	text-align: right;
@@ -101,29 +123,24 @@ html, body {
 	z-index: 3;
     }
     .pilot {
-	font-size: 1vw;
-	text-align: right;
+	color: white;
+	font-size: 2vw;
+	text-align: center;
 	position: relative;
-	top: -10px;
-	right: 50px;
+	top: 0;
+	right: 0;
 	font-weight: bold;
-    }
-    .sub {
-	background: #ecf0f1;
-	position: absolute;
-	top:40px;right:0;
-	z-index: 1;
     }
 }
 
 .content {
     @extend .shadow;
     position: absolute;
-    top: 200px;
-    left: 280px;
-    width: 700px;
-    margin: 0 auto 50px auto;
-    background: transparent;
+    top: 45%;
+    left: 20%;
+    width: 70%;;
+    margin: 0 auto 100px auto;
+    background: white;
     border-radius: 3px;
     h2 {
 	@extend .padded;
@@ -147,6 +164,7 @@ html, body {
 #rides {
     @extend .padded;
     margin-bottom: 50px;
+
 }
 
 #date {

@@ -1,10 +1,16 @@
 <span data-0='opacity:1;'
-      data-1000='opacity:0;'
+      data-500='opacity:0;'
       >
-  <%= image_tag('noname.jpg', class: 'heli') %>
+  <%= image_tag('logo-red.png', class: 'logo') %>
 </span>
 
 <div id='menu'>
+  <span data-0='opacity:0;'
+	data-500='opacity:1;'
+	>
+    <%= image_tag('logo-red.png', class: 'logo') %>
+  </span>
+
   <ul>
     <li><%= link_to 'Schedule', root_path %></li>
     <li><%= link_to 'Contact', contacts_path %></li>
@@ -16,13 +22,8 @@
 
 <div class='title'
      >
-  <h1 class='primary'
-      data-0='left:-50px;'
-      data-1000='left:-850px '
-      >Nebraska Swoop</h1>
-  <div class='sub'>
-    <h2 class='secondary'>JayHop Helicopters</h2>
-    <h3 class='pilot'>Matthew Jones (Chief Pilot)</h3>
-  </div>
+  <h3 class='pilot hidden'>
+    Matthew Jones (Chief Pilot)
+  </h3>
 </div>
 
