@@ -3,50 +3,49 @@
     Welcome to JayHop Helicopters Nebraska Swoop! Please check the boxes of those lifts that you are interested in taking. We will contact you soon!
   </h2>
 
+
   <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>  
     <div id='rides'>
 
-      <div class='ridetime'>
-	<% getDates.each do |d| %>
+    <div class='ridetime'>
+      <% getDates.each do |d| %>
 
-	  <div id='date'>
-	    <h3><%= d %></h3>
+	<div id='date'>
+	  <h3><%= d %></h3>
+	</div>
+
+	<% @rides.each do |ride| %>
+	  <% @rideTime = ride.time_start.to_time.strftime("%l:%M") %>
+	  <div id='time'>
+	    <% if (rideDate(ride) == d) %>
+	      <%= @rideTime %>
+	      <% if ride.roundtrip == true %>
+		(roundtrip)
+	      <% end %>
+	      <%= check_box_tag :rides, ride.id %>
+	    <% end %>
 	  </div>
 
-	  <% @rides.each do |ride| %>
-	    <% @rideTime = ride.time_start.to_time.strftime("%l:%M") %>
-	    <div id='time'>
-
-	      <% if (rideDate(ride) == d) %>
-		<%= @rideTime %>
-		<% if ride.roundtrip == true %>
-		  (roundtrip)
-		<% end %>
-		<%= check_box_tag "contact[ride_times][]", datetime_to_natural(ride.time_start) %>
-	      <% end %>
-
-	    </div>
-
-	  <% end %>
 	<% end %>
-      </div>
+      <% end %>
     </div>
+  </div>
 
-    <div id='ride-form'>
+  <div id='ride-form'>
 
       <%= f.input :name, :required => true %>
       <%= f.input :email, :required => true %>
       <%= f.input :message, :as => :text, :required => true %>
-
       <div class= "hidden">
+	<%= f.input :rides %>
 	<%= f.input :nickname, :hint => 'Leave this field blank!' %>
       </div>
       <div>
 	<%= f.button :submit, 'Send message', :class=> "btn btn-primary" %>
       </div>
 
-    </div>
-  <% end %>
+  </div>
+    <% end %>
 
 </div>
 

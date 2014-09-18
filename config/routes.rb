@@ -1,6 +1,8 @@
 MattJones::Application.routes.draw do
   
   devise_for :users
+#  map.resources :rides, :collection => { :submit_rides => :get }
+
   resources :rides do
     get "delete"
   end

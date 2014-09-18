@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Yellowtail|Marck+Script|Calligraffitti|Tangerine|Pacifico|Dancing+Script|Courgette|Satisfy|Pinyon+Script|Kaushan+Script);
 
-	    $hskred: #a00000;
+	    
+$hskred: #a00000;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -8,6 +9,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    background: #ecf0f1;
 }
 
 .hidden { display: none; }
@@ -25,7 +27,7 @@ html, body {
     position: fixed;
     left: -50px;
     top: -50px;
-    z-index: 6;
+    z-index: 7;
     border-radius: 50%;
     border: 3px solid black;
 }
@@ -73,7 +75,7 @@ html, body {
     right: 0;
     background: white;
     width: 100%;
-    height: 110px;
+    height: 75px;
     @extend .shadow;
     .primary {
 	font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
@@ -81,6 +83,13 @@ html, body {
 	color: red;
 	text-decoration: underline;
 	text-align: right;
+	background: white;
+	border-radius: 5px 200px;
+	padding: 50px 15px 0 0;
+	@extend .shadow;
+	position: relative;
+	top: -60px;
+	left: -50px;
     }
     .secondary {
 	color: red;
@@ -99,6 +108,12 @@ html, body {
 	right: 50px;
 	font-weight: bold;
     }
+    .sub {
+	background: #ecf0f1;
+	position: absolute;
+	top:40px;right:0;
+	z-index: 1;
+    }
 }
 
 .content {
@@ -108,7 +123,7 @@ html, body {
     left: 280px;
     width: 700px;
     margin: 0 auto 50px auto;
-    background: white;
+    background: transparent;
     border-radius: 3px;
     h2 {
 	@extend .padded;
@@ -188,3 +203,15 @@ html, body {
     text-align: left;
 }
 
+/* media queries */
+/* 683 */
+@media screen and (max-width: 683px) {
+    .heli {
+	width: 100%;
+	top:0;
+	left:0;
+    }
+    .content {
+	margin-top: 600px;
+    }
+}
