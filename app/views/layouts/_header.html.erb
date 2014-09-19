@@ -4,12 +4,21 @@
   <%= image_tag('logo-red.png', class: 'logo') %>
 </span>
 
-<div id='menu'>
+<div id='menu'
+     data-0='top:45%;'
+     data-700='top:25%;'
+     >
   <span data-0='opacity:0;'
 	data-500='opacity:1;'
 	>
     <%= image_tag('logo-red.png', class: 'logo') %>
   </span>
+  <h2 class='primary'
+    data-0='opacity:0;'
+    data-300='opacity:0.9;'
+    >Nebraska Swoop
+  </h2>
+
 
   <ul>
     <li><%= link_to 'Schedule', root_path %></li>

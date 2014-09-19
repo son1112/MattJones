@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Yellowtail|Marck+Script|Calligraffitti|Tangerine|Pacifico|Dancing+Script|Courgette|Satisfy|Orbitron|Pinyon+Script|Kaushan+Script);
-
 	    
 $hskred: #a00000;
+$med-dark-red: #380006;
+$dark-red: #0d0001;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -20,7 +21,7 @@ html, body {
 }
 
 .shadow-red {
-    box-shadow: 1px 1px 1px 1px red;
+    box-shadow: 1px 1px 1px 1px $dark-red;
 }
 
 .padded {
@@ -33,6 +34,7 @@ html, body {
     left: 0;
     width: 50%;
     z-index: 5;
+    overflow: hidden;
 }
 
 .heli {
@@ -54,13 +56,21 @@ html, body {
     left: 5%;
     padding: 5px;
     margin: auto;
-    z-index: 3;
+    z-index: 6;
     border-radius: 4px;
     .logo {
 	width: 200%;
 	position: absolute;
-	top: 250px;
+	top: 225px;
 	left: -50%;
+    }
+    .primary {
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 100%;
+	font-size: 2vw;
+	text-align: center;
     }
     ul {
 	display: inline;
@@ -69,6 +79,7 @@ html, body {
 	    padding: 10px;
 	    margin: 10px;
 	    border-radius: 3px;
+	    text-align: center;
 	}
 	a {
 	    text-decoration: none;
@@ -94,7 +105,7 @@ html, body {
     width: 60%;
     text-align: left;
     background: transparent;
-    border-radius: 5px 200px;
+//    border-radius: 5px 200px;
     padding: 30px 15px 0 35px;
 //    @extend .shadow-red;
     position: fixed;
@@ -134,19 +145,21 @@ html, body {
 }
 
 .content {
-    @extend .shadow;
+    @extend .shadow-red;
     position: absolute;
     top: 45%;
     left: 20%;
     width: 70%;;
     margin: 0 auto 100px auto;
-    background: white;
+    background: black;
     border-radius: 3px;
     h2 {
 	@extend .padded;
-	color: black;
+	color: white;
 	line-height: 120%;
-	text-align: center;
+	text-align: justify;
+	font-size: 1.5vw;
+	padding: 15px;
     }
 }
 

@@ -3,12 +3,15 @@
     data-300='opacity:0;'
     >Nebraska Swoop</h1>
 <div class='content' style=''>
-  <h2 style='border-bottom: 2px solid red;'>
-    Welcome to JayHop Helicopters Nebraska Swoop! Please check the boxes of those lifts that you are interested in taking. We will contact you soon!
+  <h2 style=''>
+    Welcome to <span style='color:red;'>JayHop Helicopters: <strong>Nebraska Swoop</strong></span>! Please scroll down and check the boxes of the helicopter game day lifts that you are interested in taking. We will contact you soon!
   </h2>
 
-  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>  
-    <div id='rides'>
+  <div id='rides'
+       data-0='opacity:0;'
+       data-300='opacity:0.9;'
+       >
+    <%= simple_form_for @contact, as: 'user_horizontal', :html => { class: 'form-horizontal' } do |f| %>  
 
       <div class='ridetime'>
 	<% getDates.each do |d| %>
@@ -38,7 +41,9 @@
 
     <div id='ride-form'>
 
-      <%= f.input :name, :required => true %>
+      <div class=''>
+	<%= f.input :name, :required => true, class: 'form-control' %>
+      </div>
       <%= f.input :email, :required => true %>
       <%= f.input :message, :as => :text, :required => true %>
 
@@ -54,16 +59,5 @@
 
 </div>
 
-
-
 <script>
- $(document).ready(function() {
-   $('#ajax').on('click', 'button', function() {
-     $.ajax('/app/views/static_pages/ajax-test', {
-       success: function(response) {
-	 $('.ajax-test').html(response).fadeIn();
-       }
-     });
-   });
- });
 </script>

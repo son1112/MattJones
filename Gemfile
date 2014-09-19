@@ -15,7 +15,7 @@ gem 'bcrypt'
 gem 'pg'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'mail_form'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 gem 'skrollr-rails'
 gem 'rails_admin'
 gem 'jquery-ui-rails'
