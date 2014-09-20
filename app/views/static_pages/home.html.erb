@@ -11,7 +11,7 @@
        data-0='opacity:0;'
        data-300='opacity:0.9;'
        >
-    <%= simple_form_for @contact, as: 'user_horizontal', :html => { class: 'form-horizontal' } do |f| %>  
+    <%= simple_form_for @contact do |f| %>  
 
       <div class='ridetime'>
 	<% getDates.each do |d| %>
@@ -42,7 +42,7 @@
     <div id='ride-form'>
 
       <div class=''>
-	<%= f.input :name, :required => true, class: 'form-control' %>
+	<%= f.input :name, :required => true %>
       </div>
       <%= f.input :email, :required => true %>
       <%= f.input :message, :as => :text, :required => true %>

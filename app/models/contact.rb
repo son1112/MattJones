@@ -12,8 +12,9 @@ class Contact < MailForm::Base
       :subject => "Nebraska Swoop",
       :to => "jayhopheli@gmail.com",
       #:to => "anderson.reinkordt@gmail.com",
+      #:bcc => ["andornotweb@gmail.com"],
       :from => %("#{name}" <#{email}>),
-      :'reply_to' => %(#{email}),
+      :'reply_to' => %(#{email})
     }
   end
 end

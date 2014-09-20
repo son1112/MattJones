@@ -12,6 +12,7 @@ html, body {
     height: 100%;
     background: black;
     font-family: 'Orbitron';
+
 }
 
 .hidden { display: none; }
@@ -155,7 +156,8 @@ html, body {
     border-radius: 3px;
     h2 {
 	@extend .padded;
-	color: white;
+//	color: white;
+	color: #6e6e6e;
 	line-height: 120%;
 	text-align: justify;
 	font-size: 1.5vw;
