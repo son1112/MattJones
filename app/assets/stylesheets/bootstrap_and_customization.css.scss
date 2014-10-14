@@ -59,12 +59,14 @@ html, body {
     margin: auto;
     z-index: 6;
     border-radius: 4px;
+
     .logo {
 	width: 200%;
 	position: absolute;
-	top: 225px;
+	top: 325px;
 	left: -50%;
     }
+
     .primary {
 	position: absolute;
 	top: 110%;
@@ -73,21 +75,25 @@ html, body {
 	font-size: 2vw;
 	text-align: center;
     }
+
     ul {
 	display: inline;
 	list-style-type: none;
+
 	li {
 	    padding: 10px;
 	    margin: 10px;
 	    border-radius: 3px;
 	    text-align: center;
 	}
+
 	a {
 	    text-decoration: none;
 	    font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';
 	    font-size: 2vw;
 	    background: white;
 	    color: red;
+	    z-index: 10;
 	    &:hover {
 		background: red;
 		color: white;
@@ -263,5 +269,8 @@ html, body {
     #menu {
 	display: none;
     }
-
+    #ride-index {
+	width: 50%;
+	left: -25%;
+    }
 }
