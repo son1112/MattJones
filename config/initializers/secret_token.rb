@@ -9,4 +9,9 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-MattJones::Application.config.secret_key_base = '863767027250d55f2e77e4359b758e43a763af26cfbb3cdb4c9a8f22dbce1f4efa09a66310810a0defe289e13a421318d99ad19596563807f57293b584186d9a'
+
+MattJones::Application.config.secret_key_base = if Rails.env.development? or Rails.env.test?
+                                              ('x' * 30)
+                                            else
+                                              ENV['SECRET_KEY_BASE']
+                                            end
