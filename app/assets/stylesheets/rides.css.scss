@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .hi-li {
     font-family: 'Satisfy', 'Kaushan Script', 'Pacifico', 'Tangerine', 'Marck Script', 'Yellowtail';    
     font-size: 2vw;
@@ -10,4 +12,16 @@
 	background: red;
 	color: white;
     }
+}
+
+#rides {
+    @extend .padded;
+    margin-bottom: 50px;
+}
+
+.ridetime {
+    @extend .padded;
+    background: gray;
+    color: white;
+    border-radius: 4px;
 }

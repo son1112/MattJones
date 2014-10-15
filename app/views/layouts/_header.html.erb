@@ -1,40 +1,56 @@
 <span data-0='opacity:1;'
       data-500='opacity:0;'
       >
-  <%= image_tag('logo-red.png', class: 'logo') %>
+  <%= link_to image_tag('logo-red.png', class: 'logo'), root_path %>
 </span>
 
 <div id='menu'
      data-0='top:45%;'
-     data-700='top:25%;'
+     data-700='top:15%;'
      >
+
+  <!--  <ul class="row"> -->
+  <!--    <li class="span4"><%#= link_to 'Schedule', root_path %></li> -->
+  <!--    <li class="span8"><%#= link_to 'Contact', contacts_path %></li> -->
+  <!--    <%# if current_user %> -->
+  <!--      <li><%#= link_to 'Sign Out', destroy_user_session_path, method: :delete %><!--</li> -->
+  <!--    <%# else %> -->
+  <!--      <li><%#= link_to 'Sign-Up', new_user_registration_path %></li> -->
+  <!--      <li><%#= link_to 'Sign-In', new_user_session_path %></li> -->
+  <!--    <%# end %> -->
+  <!--    <%# if current_user.try(:admin?) %> -->
+  <!--      <li><%#= link_to 'Rides', rides_path %></li> -->
+  <!--    <%# end %> -->
+  <!--    <li></li> -->
+  <!--    <li></li> -->
+  <!--  </ul> -->
+
+  <div class="menu-nav row">
+    <div><%= link_to 'Schedule', root_path %></div>
+    <div><%= link_to 'Contact', contacts_path %></div>
+    <% if current_user %>
+      <div><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></div>
+    <% else %>
+      <div><%= link_to 'Sign-Up', new_user_registration_path %></div>
+      <div><%= link_to 'Sign-In', new_user_session_path %></div>
+    <% end %>
+    <% if current_user.try(:admin?) %>
+      <div><%= link_to 'Rides', rides_path %></div>
+    <% end %>
+    <div></div>
+    <div></div>
+  </div>
   <span data-0='opacity:0;'
 	data-500='opacity:1;'
 	>
-    <%= image_tag('logo-red.png', class: 'logo') %>
+    <%= link_to image_tag('logo-red.png', class: 'logo'), root_path %>
   </span>
   <h2 class='primary'
-    data-0='opacity:0;'
-    data-300='opacity:0.9;'
-    >Nebraska Swoop
+      data-0='opacity:0;'
+      data-300='opacity:0.9;'
+      >Nebraska Swoop
   </h2>
 
-
-  <ul>
-    <% if current_user %>
-      <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-      <li><%= link_to 'Sign In', new_user_session_path %></li>
-    <% end %>
-    <li><%= link_to 'Schedule', root_path %></li>
-    <li><%= link_to 'Contact', contacts_path %></li>
-    <% if current_user.try(:admin?) %>
-      <li><%= link_to 'Rides', rides_path %></li>
-    <% end %>
-    <li></li>
-    <li></li>
-  </ul>
 </div>
 
 <div class='title'

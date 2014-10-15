@@ -82,3 +82,13 @@ Scheduler
   [[./Gemfile]]
   [[./config/routes.rb]]
   [[./app/assets/javascripts/application.js]]
+
+* info
+
+  shuttle services for nebraska swoop
+  corporate charter: 800/hr
+  swoop 180/hr
+
+  matthew jones chief pilot
+  phone
+  email
